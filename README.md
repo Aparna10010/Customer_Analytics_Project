@@ -1,197 +1,143 @@
-Great update! Since you applied PCA (Principal Component Analysis) in your Customer Segmentation, here’s your fully updated README.md with that added under the correct section.
-
 
 ---
 
-🧠 Customer Analytics Project
+# 🧠 Customer Analytics Project
 
-An end-to-end customer churn prediction and segmentation project. It includes EDA, SMOTE for class balancing, model training (baseline and tuned), dimensionality reduction using PCA, segmentation, model logging using MLflow, a live prediction interface using Gradio (with XGBoost tuned model), and Docker for containerization.
-
+An end-to-end **Customer Churn Prediction and Segmentation** pipeline built from scratch. The project includes EDA, class balancing with SMOTE, model training and tuning, dimensionality reduction, customer segmentation, live predictions using Gradio, model tracking via MLflow, and Docker containerization.
 
 ---
 
-📁 Project Workflow
+## 📁 Project Workflow
 
-🔹 1. Data Preprocessing
+### 🔹 1. Data Preprocessing
 
-Loaded the dataset
+* Loaded dataset and explored via EDA
+* Feature engineering and transformation
+* Scaling and label encoding
 
-Cleaned and explored using EDA
+### 🔹 2. Class Imbalance Handling
 
-Feature engineering & manipulation
+* Visualized churn distribution
+* Applied **SMOTE** to fix class imbalance
 
-Scaling and label encoding
+### 🔹 3. Model Building – Baseline
 
+Trained on **imbalanced** data:
 
-🔹 2. Class Imbalance Handling
-
-Visualized Churn Distribution
-
-Applied SMOTE to fix imbalance
-
-
-🔹 3. Model Building – Baseline
-
-Trained the following models on imbalanced data:
-
-Logistic Regression
-
-Decision Tree
-
-Random Forest
-
-XGBoost
-
+* Logistic Regression
+* Decision Tree
+* Random Forest
+* XGBoost
 
 Evaluated using:
 
-Confusion Matrix
+* Confusion Matrix
+* AUC-ROC Curve
 
-AUC-ROC Curve
+### 🔹 4. Model Building – After SMOTE (Balanced)
 
+Re-trained above models and added:
 
-🔹 4. Model Building – Balanced (After SMOTE)
+* **Feedforward Neural Network (FFNN)**
 
-Re-trained above models
+### 🔹 5. Customer Segmentation
 
-Added Feedforward Neural Network (FFNN)
+* Applied **PCA** for dimensionality reduction
+* Clustering Techniques:
 
+  * K-Means
+  * DBSCAN
+* Evaluated with:
 
-🔹 5. Customer Segmentation
+  * Elbow Method
+  * Silhouette Score
+* Saved post-PCA cluster results
 
-Applied PCA to reduce dimensionality and improve clustering results
+### 🔹 6. Model Tracking with MLflow
 
-Clustering Techniques:
+* Logged **all baseline and tuned models**
+* Hyperparameter tuning with **RandomizedSearchCV**
+* Tracked metrics, parameters, and artifacts
 
-K-Means
+### 🔹 7. Gradio Deployment
 
-DBSCAN
+* Built interactive **Gradio interface** using tuned XGBoost
+* Integrated with MLflow as an artifact
 
+### 🔹 8. Docker Containerization
 
-Used:
-
-Elbow Method
-
-Silhouette Score
-
-
-Clustered post-PCA-transformed data for better separation
-
-Saved clustering results
-
-
-🔹 6. Model Tracking with MLflow
-
-Logged all baseline models
-
-Applied Hyperparameter Tuning (RandomizedSearchCV)
-
-Tuned: Logistic Regression, Decision Tree, Random Forest, XGBoost, FFNN
-
-
-Logged all tuned models to MLflow with parameters, metrics, and artifacts
-
-
-🔹 7. Gradio Deployment
-
-Developed Gradio interface using XGBoost (tuned model)
-
-Logged and tracked in MLflow with screenshot and link
-
-
-🔹 8. Docker Containerization
-
-Added Dockerfile and built image for portability
-
-
+* Dockerized entire app with `Dockerfile`
+* Built and ran container for portability
 
 ---
 
-📸 Screenshots & Live Demo
+## 📸 Screenshots & Visuals
 
-📊 Class Imbalance Visualization
+### 📊 Class Imbalance Visualization
+![Churn Distribution]()
 
+> Churn: `1 = Yes`, `0 = No` — imbalance addressed using **SMOTE**
 
+### 🌐 Live Gradio UI
 
-> Churn: 1 = Yes, 0 = No — imbalance handled using SMOTE
+▶ [Launch Gradio App Live](https://74210d45131a11131e.gradio.live/)
 
+> Predict customer churn using an interactive, minimal UI.
 
-
-
----
-
-🌐 Live Gradio UI
-
-▶ Launch Live App
-
-> Predict customer churn using an interactive and minimal UI.
+### 📋 MLflow Tracking
+![ML-Flow Screenshots]()
 
 
-
+> Includes baseline and tuned models with metrics, parameters, and UI screenshots logged as artifacts.
 
 ---
 
-📋 MLflow Screenshot
+## 🧪 Tech Stack
 
-
-
-> Shows baseline and tuned models, metrics, parameters, and Gradio App as an artifact.
-
-
-
-
----
-
-🧪 Tech Stack
-
-Languages & Libraries: Python, Pandas, NumPy, Scikit-learn, XGBoost, Keras/TensorFlow
-
-Balancing: SMOTE (via imbalanced-learn)
-
-Dimensionality Reduction: PCA
-
-Clustering: KMeans, DBSCAN
-
-Model Logging: MLflow
-
-Deployment: Gradio
-
-Containerization: Docker
-
-
+* **Languages & Libraries**: Python, Pandas, NumPy, Scikit-learn, XGBoost, Keras/TensorFlow
+* **Balancing**: SMOTE (via `imbalanced-learn`)
+* **Dimensionality Reduction**: PCA
+* **Clustering**: KMeans, DBSCAN
+* **Model Tracking**: MLflow
+* **Deployment**: Gradio
+* **Containerization**: Docker
 
 ---
 
-🛠 Installation
+## 🛠 Installation & Usage
 
-✅ Create Environment & Install Dependencies
+### ✅ Setup Environment
 
+```bash
 pip install -r requirements.txt
+```
 
-✅ Run Gradio App
+### ✅ Run Gradio App
 
+```bash
 python app.py
+```
 
-🐳 Docker Setup
+### 🐳 Docker Setup
 
+```bash
 docker build -t customer-analytics .
 docker run -p 8501:8501 customer-analytics
-
-
-
-❗ Limitations
-
-Azure deployment skipped due to unavailability of a valid card (Visa/MasterCard required for signup)
-
-
+```
 
 ---
 
-🙋‍♀ Author
+## ❗ Limitations
 
-Aparna Sharmaa
+* Azure deployment was **skipped** due to the unavailability of a valid card (Visa/MasterCard required for signup)
+
+---
+
+## 🙋‍♀ Author
+
+**Aparna Sharmaa**
 Fresher | M.Com | Data Science Enthusiast
-🔗 Actively looking for Data Analyst / ML roles
-
+🔍 *Actively looking for Data Analyst / Scientist*
 
 ---
+
