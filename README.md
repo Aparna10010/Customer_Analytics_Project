@@ -79,6 +79,7 @@ Re-trained above models and added:
 ### 🌐 Live Gradio UI
 
 ▶ [Launch Gradio App Live](https://74210d45131a11131e.gradio.live/)
+📸[Gradio UI ](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/Gradio%20UI.png)
 
 > Predict customer churn using an interactive, minimal UI.
 
