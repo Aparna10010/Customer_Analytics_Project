@@ -84,7 +84,9 @@ Re-trained above models and added:
 > Predict customer churn using an interactive, minimal UI.
 
 ### 📋 MLflow Tracking
-![ML-Flow Screenshots]()
+![ML-Flow Screenshots](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/ML-Flow.png)
+Example 1:()
+Example 2:()
 
 
 > Includes baseline and tuned models with metrics, parameters, and UI screenshots logged as artifacts.
