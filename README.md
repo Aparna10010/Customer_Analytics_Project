@@ -72,7 +72,7 @@ Re-trained above models and added:
 ## 📸 Screenshots & Visuals
 
 ### 📊 Class Imbalance Visualization
-![Churn Distribution]()
+![Churn Distribution](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/Screenshot%202025-07-19%20185325.png)
 
 > Churn: `1 = Yes`, `0 = No` — imbalance addressed using **SMOTE**
 
