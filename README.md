@@ -85,8 +85,8 @@ Re-trained above models and added:
 
 ### 📋 MLflow Tracking
 ![ML-Flow Screenshots](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/ML-Flow.png)
-Example 1:()
-Example 2:()
+![Example 1:](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/ML-Flow1.png)
+![Example 2:]()
 
 
 > Includes baseline and tuned models with metrics, parameters, and UI screenshots logged as artifacts.
