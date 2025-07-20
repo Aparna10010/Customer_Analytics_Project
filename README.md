@@ -86,7 +86,7 @@ Re-trained above models and added:
 ### 📋 MLflow Tracking
 ![ML-Flow Screenshots](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/ML-Flow.png)
 ![Example 1:](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/ML-Flow1.png)
-![Example 2:]()
+![Example 2:](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/ML-Flow7.png)
 
 
 > Includes baseline and tuned models with metrics, parameters, and UI screenshots logged as artifacts.
@@ -137,8 +137,8 @@ docker run -p 8501:8501 customer-analytics
 ## 🙋‍♀ Author
 
 **Aparna Sharmaa**
-Fresher | M.Com | Data Science Enthusiast
-🔍 *Actively looking for Data Analyst / Scientist*
+*Fresher | M.Com | Data Science Enthusiast
+*🔍 *Actively looking for Data Analyst / Data Scientist*
 
 ---
 
