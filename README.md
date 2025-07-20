@@ -25,8 +25,6 @@ An end-to-end **Customer Churn Prediction and Segmentation** pipeline built from
 Trained on **imbalanced** data:
 
 * Logistic Regression
-* Decision Tree
-* Random Forest
 * XGBoost
 
 Evaluated using:
